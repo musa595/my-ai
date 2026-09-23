@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My AI</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <button class="new" id="newChat">＋ New chat</button>
+  <div id="status">● Connecting…</div>
+  <div class="label">Recent chats</div>
+  <div id="history"></div>
+  <button class="sideBtn" id="instructionsBtn">⚙ Personal instructions</button>
+  <div class="small">My AI • Ollama Cloud</div>
+</aside>
+<main class="main">
+<header>
+  <button class="mobile" id="menu">☰</button>
+  <div class="title"><span class="logo">✦</span> My AI</div>
+  <div>
+    <button class="topBtn" id="web">🌐 Web</button>
+    <button class="topBtn" id="clear">⌫</button>
+  </div>
+</header>
+<section class="chat" id="chat">
+  <div class="welcome" id="welcome">
+    <div class="bigLogo">✦</div>
+    <h1>What can I help with?</h1>
+    <p>Powered by your Ollama Cloud model.</p>
+  </div>
+</section>
+<div class="composerWrap">
+<form id="form" class="composer">
+<textarea id="input" rows="1" placeholder="Message My AI…"></textarea>
+<button id="send" type="submit">↑</button>
+</form>
+<div class="hint">Enter = send • Shift+Enter = new line • Ctrl+N = new chat</div>
+</div>
+</main>
+</div>
+
+<div class="modal hidden" id="modal">
+<div class="modalBox">
+<div class="modalHead"><h2>Personal instructions</h2><button id="close">×</button></div>
+<p>These are sent to My AI with every request.</p>
+<textarea id="inst" placeholder="Example: Talk casually, keep answers simple, and tell me when you are unsure."></textarea>
+<button id="save">Save</button>
+</div>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
